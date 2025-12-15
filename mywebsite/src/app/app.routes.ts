@@ -15,9 +15,12 @@ export const routes: Routes = [
     { path:'contact', component:Contact},
     { path:'categories', component:Categories},
     { path:'grocery', component:Grocery},
-    { path:'grocery-hub', component:GroceryHub},
     { path:'facebook', component:Facebook},
     { path:'instragram', component:Instragram},
     { path:'twitter', component:Twitter},    
+    {
+    path: 'grocery-hub',
+    loadChildren: () => import('./grocery-hub/grocery-hub.routes').then(m => m.groceryhubRoutes)
+  },
     { path: '', redirectTo: 'home', pathMatch: 'full' }
 ];
