@@ -12,6 +12,7 @@ export const groceryhubRoutes: Routes = [
     {path:'admin', component:Admin},
     {path:'customer', component:Customer},
     {path:'supplier', component:Supplier},
+    {path:'', redirectTo:'admin', pathMatch:'full'}
     ]
 }
 ];
