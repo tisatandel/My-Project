@@ -8,6 +8,7 @@ import { GroceryHub } from './grocery-hub/grocery-hub';
 import { Facebook } from './facebook/facebook';
 import { Instragram } from './instragram/instragram';
 import { Twitter } from './twitter/twitter';
+import { GreenLab } from './green-lab/green-lab';
 
 export const routes: Routes = [
     { path:'home', component:Home},
@@ -17,7 +18,8 @@ export const routes: Routes = [
     { path:'grocery', component:Grocery},
     { path:'facebook', component:Facebook},
     { path:'instragram', component:Instragram},
-    { path:'twitter', component:Twitter},    
+    { path:'twitter', component:Twitter}, 
+    { path:'green-lab', component:GreenLab},   
     {
     path: 'grocery-hub',
     loadChildren: () => import('./grocery-hub/grocery-hub.routes').then(m => m.groceryhubRoutes)

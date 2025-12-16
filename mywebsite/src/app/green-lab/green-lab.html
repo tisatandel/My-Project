@@ -1,0 +1,37 @@
+<div class="green-lab-page">
+
+  <!-- Header -->
+  <h1>🌿 Green Basket Lab</h1>
+  <p class="subtitle">
+    Fresh groceries, trusted quality
+  </p>
+
+  <!-- Property Binding -->
+  <img [src]="logoUrl" alt="Green Basket Logo" class="logo">
+
+  <!-- Two-way Binding -->
+  <div class="box">
+    <label>Your Name</label>
+    <input type="text"
+           [(ngModel)]="customerName"
+           placeholder="Enter your name">
+
+    <!-- Interpolation -->
+    <p class="welcome">
+      Welcome, {{ customerName || 'Customer' }} 👋
+    </p>
+  </div>
+
+  <!-- Event Binding -->
+  <div class="box">
+    <p>Items in Cart: <strong>{{ cartCount }}</strong></p>
+    <button (click)="addToCart()">Add to Cart</button>
+  </div>
+
+  <!-- Signal -->
+  <div class="box">
+    <p>Need help?</p>
+    <strong>{{ supportEmail() }}</strong>
+  </div>
+
+</div>
