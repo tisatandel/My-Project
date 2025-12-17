@@ -85,3 +85,97 @@
 .working-hours {
   margin-top: 20px;
 }
+
+/* --- Table Section Styling --- */
+.table-section {
+  flex: 1 1 100%;
+  margin-top: 30px;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.table-section h2 {
+  margin-bottom: 15px;
+  color: #2c7a4b;
+}
+
+/* --- Table Styling --- */
+.table-section table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1rem;
+}
+
+.table-section th, 
+.table-section td {
+  border: 1px solid #ccc;
+  padding: 10px 12px;
+  text-align: left;
+}
+
+.table-section th {
+  background-color: #2c7a4b;
+  color: white;
+  font-weight: bold;
+}
+
+.table-section tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.table-section tr:hover {
+  background-color: #e8f5e9;
+}
+
+/* --- Action Buttons --- */
+.table-section button {
+  padding: 5px 10px;
+  font-size: 0.9rem;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  margin-right: 5px;
+  transition: 0.3s;
+}
+
+.table-section .edit {
+  background-color: #ff9800;
+  color: white;
+}
+
+.table-section .edit:hover {
+  background-color: #e68a00;
+}
+
+.table-section .delete {
+  background-color: #f44336;
+  color: white;
+}
+
+.table-section .delete:hover {
+  background-color: #d32f2f;
+}
+
+/* --- No Data Row --- */
+.table-section td[colspan] {
+  text-align: center;
+  font-style: italic;
+  color: #777;
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  .table-section table, 
+  .table-section th, 
+  .table-section td {
+    font-size: 0.9rem;
+  }
+
+  .table-section button {
+    padding: 4px 8px;
+    font-size: 0.8rem;
+  }
+  
+}

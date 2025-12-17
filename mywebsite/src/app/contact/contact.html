@@ -12,11 +12,37 @@
       <h2>Get in Touch</h2>
 
       <form>
-        <input type="text" placeholder="Your Name" />
-        <input type="email" placeholder="Your Email" />
-        <input type="text" placeholder="Subject" />
-        <textarea rows="4" placeholder="Your Message"></textarea>
-        <button type="submit">Send Message</button>
+        <input type="text"
+               placeholder="Your Name"
+               [(ngModel)]="nameInput"
+               name="name">
+               @if (nameInput && nameInput.length < 3) {
+      <small style="color:red">
+        Name must be at least 3 characters
+      </small>
+    }
+
+        <input type="email"
+               placeholder="Your Email"
+               [(ngModel)]="emailInput"
+               name="email">
+
+        <input type="text"
+               placeholder="Subject"
+               [(ngModel)]="subjectInput"
+               name="subject">
+
+        <textarea rows="4"
+                  placeholder="Your Message"
+                  [(ngModel)]="messageInput"
+                  name="message"></textarea>
+                  @if (messageInput && messageInput.length < 10) {
+      <small style="color:red">
+        Message must be at least 10 characters
+      </small>
+    }
+
+        <button type="button" (click)="add()">Send Message</button>
       </form>
     </div>
 
@@ -34,7 +60,39 @@
         <p>Sunday: 9 AM – 6 PM</p>
       </div>
     </div>
+</div>
+    <!-- Table Section -->
+    <div class="table-section">
+      <h2>📋 Submitted Messages</h2>
 
-  </div>
+      <table border="1" width="100%">
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Subject</th>
+          <th>Message</th>
+          <th>Action</th>
+        </tr>
 
-</section>
+        @if (messages.length === 0) {
+    <tr>
+      <td colspan="4" style="text-align:center;">
+        No data available
+      </td>
+    </tr>
+  }
+        @for (msg of messages; track $index) {
+          <tr>
+            <td>{{ msg.name }}</td>
+            <td>{{ msg.email }}</td>
+            <td>{{ msg.subject }}</td>
+            <td>{{ msg.message }}</td>
+            <td>
+              <button (click)="delete($index)">Delete</button> &nbsp;&nbsp;&nbsp;&nbsp;
+              <button (click)="edit($index)">Edit</button>
+            </td>
+          </tr>
+        }
+      </table>
+    </div>
+  <section>
