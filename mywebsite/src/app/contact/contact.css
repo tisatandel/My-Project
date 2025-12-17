@@ -86,9 +86,9 @@
   margin-top: 20px;
 }
 
-/* --- Table Section Styling --- */
+/* -------- Table Section -------- */
 .table-section {
-  flex: 1 1 100%;
+  width: 100%;
   margin-top: 30px;
   background-color: #ffffff;
   padding: 20px;
@@ -101,81 +101,80 @@
   color: #2c7a4b;
 }
 
-/* --- Table Styling --- */
+/* -------- Table -------- */
 .table-section table {
   width: 100%;
   border-collapse: collapse;
-  font-size: 1rem;
 }
 
-.table-section th, 
+.table-section th,
 .table-section td {
   border: 1px solid #ccc;
   padding: 10px 12px;
   text-align: left;
 }
 
+/* Header */
 .table-section th {
   background-color: #2c7a4b;
   color: white;
-  font-weight: bold;
 }
 
-.table-section tr:nth-child(even) {
+/* Zebra rows */
+.table-section tr:nth-child(even) td {
   background-color: #f9f9f9;
 }
 
-.table-section tr:hover {
+/* ✅ Row hover (WORKING) */
+.table-section tr:hover td {
   background-color: #e8f5e9;
 }
 
-/* --- Action Buttons --- */
-.table-section button {
-  padding: 5px 10px;
-  font-size: 0.9rem;
+/* -------- Buttons -------- */
+.table-section td button {
+  position: relative;
+  z-index: 2;
+  padding: 6px 12px;
   border-radius: 4px;
   border: none;
   cursor: pointer;
-  margin-right: 5px;
-  transition: 0.3s;
-}
-
-.table-section .edit {
-  background-color: #ff9800;
   color: white;
 }
 
-.table-section .edit:hover {
+/* Edit button */
+.table-section td .edit {
+  background-color: #ff9800;
+}
+
+.table-section td .edit:hover {
   background-color: #e68a00;
 }
 
-.table-section .delete {
+/* Delete button */
+.table-section td .delete {
   background-color: #f44336;
-  color: white;
 }
 
-.table-section .delete:hover {
+.table-section td .delete:hover {
   background-color: #d32f2f;
 }
 
-/* --- No Data Row --- */
+/* No data row */
 .table-section td[colspan] {
   text-align: center;
-  font-style: italic;
   color: #777;
+  font-style: italic;
 }
 
-/* --- Responsive --- */
+/* -------- Responsive -------- */
 @media (max-width: 768px) {
-  .table-section table, 
-  .table-section th, 
-  .table-section td {
-    font-size: 0.9rem;
+  .contact-container {
+    flex-direction: column;
   }
 
-  .table-section button {
-    padding: 4px 8px;
-    font-size: 0.8rem;
+  .table-section table,
+  .table-section th,
+  .table-section td {
+    font-size: 14px;
   }
-  
 }
