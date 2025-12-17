@@ -1,0 +1,23 @@
+.container {
+  background-color: #fff3e0;
+  padding: 40px;
+  border-radius: 12px;
+}
+
+h2 {
+  color: #ef6c00;
+  font-weight: 700;
+}
+
+.btn-lg {
+  border-radius: 50px;
+  padding: 18px 0;
+  font-size: 20px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-lg:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}

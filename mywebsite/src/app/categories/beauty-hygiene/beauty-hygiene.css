@@ -1,0 +1,33 @@
+/* Container style */
+.container {
+  background-color: #fce4ec; /* light pink feel */
+  padding: 40px;
+  border-radius: 12px;
+}
+
+/* Heading */
+h2 {
+  color: #c2185b;
+  font-weight: 700;
+}
+
+/* Buttons common style */
+.btn-lg {
+  border-radius: 50px;
+  padding: 18px 0;
+  font-size: 20px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+/* Hover effect for buttons */
+.btn-lg:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* Emoji adjustments */
+.btn-lg span {
+  vertical-align: middle;
+  font-size: 1.5em;
+}
