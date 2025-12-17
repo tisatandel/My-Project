@@ -1,9 +1,10 @@
 import { Component, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { RouterModule } from "@angular/router";
 
 @Component({
   selector: 'app-green-lab',
-  imports: [FormsModule],
+  imports: [FormsModule, RouterModule],
   templateUrl: './green-lab.html',
   styleUrls: ['./green-lab.css']
 })
