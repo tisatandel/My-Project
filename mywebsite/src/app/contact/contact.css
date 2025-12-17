@@ -178,3 +178,30 @@
     font-size: 14px;
   }
 }
+/* -------- Action Buttons -------- */
+.table-section td button {
+  padding: 6px 14px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  color: white;
+}
+
+/* EDIT – BLUE */
+.table-section td .edit {
+  background-color: #2196f3;
+}
+
+.table-section td .edit:hover {
+  background-color: #1976d2;
+}
+
+/* DELETE – RED */
+.table-section td .delete {
+  background-color: #f44336;
+}
+
+.table-section td .delete:hover {
+  background-color: #d32f2f;
+}
